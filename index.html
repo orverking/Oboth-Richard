@@ -368,43 +368,54 @@
                     </section>
                     <!-- Testimonial End -->
 
-                    <!-- Contact Start -->
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
-                        <h1 class="title pb-3 mb-5">Contact Me</h1>
-						<h4 class="mb-4">Receive messages instantly from website about new product updates and new designs.</h4>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control border-0 bg-secondary" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                    <!-- Contact End -->
+<!-- Contact Start -->
+<section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
+    <h1 class="title pb-3 mb-5">Contact Me</h1>
+    <h4 class="mb-4">Receive messages instantly from website about new product updates and new designs.</h4>
+    
+    <!-- Success Message (Hidden by default) -->
+    <div id="success-message" class="alert alert-success mb-4" style="display: none;">
+        Thank you! Your message has been sent successfully.
+    </div>
+    
+    <!-- Error Message (Hidden by default) -->
+    <div id="error-message" class="alert alert-danger mb-4" style="display: none;">
+        Sorry, something went wrong. Please try again or email me directly.
+    </div>
+    
+    <form action="sendmail.php" method="POST" id="contactForm">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control border-0 bg-secondary" id="name" name="name" placeholder="Your Name" required>
+                    <label for="name">Your Name</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control border-0 bg-secondary" id="email" name="email" placeholder="Your Email" required>
+                    <label for="email">Your Email</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control border-0 bg-secondary" id="subject" name="subject" placeholder="Subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" name="message" style="height: 200px" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Send Message</button>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- Contact End -->
 
                     <!-- Footer Start -->
                     <section class="wow fadeIn" data-wow-delay="0.1s">
@@ -456,5 +467,6 @@
         <script src="js/main.js"></script>
     </body>
 </html>
+
 
 
