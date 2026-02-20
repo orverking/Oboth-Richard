@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Your email address
-    $to = "obothrichardjunior@gmail.com";
+    $to = "obothrichardgyver@gmail.com";
     
     // Get form data
     $name = $_POST['name'];
